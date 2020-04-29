@@ -1,0 +1,103 @@
+@import '~normalize.css';
+
+body{
+    margin:0; 
+    padding: 0;
+    background-color: $body-color;
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+}
+
+@import '~vue-multiselect/dist/vue-multiselect.min.css';
+
+// Override styles: Fix colors of multiselect for more consistent with widget.
+.multiselect{
+    width: 300px;
+    display: block;
+    min-height: 28px;
+    font-size: 12px;
+
+    .multiselect__select{
+        width: 30px;
+        height: 26px;
+    }
+        .multiselect__select:before {
+            color: $font-color;
+            border-color: #000 transparent transparent;
+            border-style: solid;
+            border-width: 7px 3px 0;
+        }
+    .multiselect__tags{
+        min-height: 28px;
+        font-size: 12px;
+        padding: 3px 30px 3px 3px;
+        border-radius: 3px;
+        border: 1px solid $element-border-color;
+    }
+    .multiselect__tag {
+        color: $font-color;
+        background: $main-color;
+    }
+    .multiselect__tag-icon:after {
+        color: $font-color;
+    }
+    .multiselect__tag-icon:focus, .multiselect__tag-icon:hover {
+        background: #b1b1b1;
+    }
+    .multiselect__placeholder {
+        margin-bottom: 0;
+    }
+    .multiselect__input, .multiselect__single {
+        border-radius: 0;
+        margin-bottom: 0;
+        font-size: 12px;
+    }
+    .multiselect__placeholder {
+        padding-top: 3px;
+        padding-left: 5px;
+    }
+
+    .multiselect__option {
+        padding: 0 10px;
+        min-height: 24px;
+        line-height: 24px;
+        color: $font-color;
+    }
+    .multiselect__option:after {
+        line-height: 24px;
+        padding-right: 12px;
+        padding-left: 20px;
+        font-size: 12px;
+        font-weight: normal;
+        background: $main-color;
+        color: $font-color;
+    }
+    .multiselect__option--highlight {
+        background: $main-color;
+    }
+}
+
+// Override styles: Fix colors of datepicker for more consistent with widget.
+.vdp-datepicker {
+    .vdp-datepicker__calendar {
+        width: 220px;
+    }
+    .vdp-datepicker__calendar header {
+        line-height: 28px;
+    }
+    .vdp-datepicker__calendar .cell {
+        padding: 0 3px;
+        height: 28px;
+        line-height: 26px;
+    }
+
+    .vdp-datepicker__calendar .cell.selected:hover {
+        background: $main-color;
+    }
+    .vdp-datepicker__calendar .cell.selected {
+        background: $main-color;
+    }
+    .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day:hover, .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month:hover, .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year:hover {
+        border: 1px solid $main-color;
+    }
+}
